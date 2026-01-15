@@ -247,7 +247,7 @@ class GameScene extends Phaser.Scene {
 
 new Phaser.Game({
   type: Phaser.AUTO,
-  parent: "game",
+  parent: document.body,
   width: 900,
   height: 600,
   backgroundColor: "#050612",

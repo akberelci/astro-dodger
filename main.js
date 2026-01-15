@@ -245,12 +245,16 @@ class GameScene extends Phaser.Scene {
   }
 }
 
-new Phaser.Game({
-  type: Phaser.AUTO,
-  parent: document.body,
-  width: 900,
-  height: 600,
-  backgroundColor: "#050612",
-  physics: { default: "arcade", arcade: { debug: false } },
-  scene: [GameScene]
-});
+window.onload = () => {
+  new Phaser.Game({
+    type: Phaser.AUTO,
+    width: 900,
+    height: 600,
+    backgroundColor: "#050612",
+    physics: {
+      default: "arcade",
+      arcade: { debug: false }
+    },
+    scene: [GameScene]
+  });
+};

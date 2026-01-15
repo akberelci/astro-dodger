@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astro Dodger (Phaser)</title>
+  <style>
+    html, body { height:100%; margin:0; background:#050612; }
+    .wrap { height:100%; display:grid; place-items:center; }
+    canvas { border-radius:14px; outline: 1px solid rgba(255,255,255,0.10); }
+    .hint {
+      position: fixed; left: 12px; bottom: 10px;
+      color: rgba(215,231,255,0.75);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size: 13px;
+      user-select:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="game"></div>
+  <div class="hint">
+    Controls: WASD / Arrow Keys — Start & Restart: Click or SPACE
+  </div>
+
+  <!-- Phaser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+
+  <!-- No module to avoid local file issues on macOS -->
+  <script src="./src/main.js"></script>
+</body>
+</html>
